@@ -1,0 +1,10 @@
+# PART II : using infinite while loop
+
+start = int(input("Enter start: "))
+end = int(input("Enter end: "))
+number = start
+
+while True:
+    if number <= end :
+        print(number)
+        number = number + 1
