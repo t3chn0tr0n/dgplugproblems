@@ -1,0 +1,24 @@
+# [27/07/17] 
+#       -- calculator using if-else --
+# >>> 2 numbers and the operator to be taken by user
+
+flag = 0
+number_1 = float(input("Enter 1st number: "))
+number_2 = float(input("Enter 2nd number: "))
+operator = input("Enter the operator: (+ - * /) : ")
+
+if(operator == '+'):
+    result = number_1 + number_2
+elif(operator == '-'):
+    result = number_1 - number_2
+elif(operator == '*'):
+    result = number_1 * number_2
+elif(operator == '/'):
+    result = number_1 / number_2
+else:
+    flag = 1
+    
+if flag:
+    print("ERROR : No recognisable operator given!")
+else:
+    print(number_1,operator,number_2,"=",result)
