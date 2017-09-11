@@ -1,0 +1,25 @@
+from requests import get
+
+"""
+ Write a function which will take any URL as an argument, and then check if there is any image in that URL, 
+ and if yes then save it in the current directory.
+"""
+
+
+def save_if_img(name, link):
+    parts= name.split('.')
+    if parts[1] in ['jpeg', 'jpg', 'svg', 'png', 'bmp']:
+        resp = get(link)
+        with open('output.png', 'wb') as file:
+            file.write(resp.content)
+
+
+def image_extractor(link):
+    parts = link.split('/')
+    for item in parts:
+        if '.' in item:
+            save_if_img(item, link)
+        else
+            print("There is no Image in the Url")
+
+image_extractor('https://dgplug.org/assets/img/header.png')
