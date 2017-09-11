@@ -19,5 +19,5 @@ def image_extractor(link):
         print("There is no Image in the Url")
 
 # test cases
-# image_extractor('https://dgplug.org/assets/img/header.png')
-# image_extractor('https://dgplug.org/assets/img/header')
+image_extractor('https://dgplug.org/assets/img/header.png')
+image_extractor('https://dgplug.org/assets/img/header')
